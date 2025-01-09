@@ -1,13 +1,9 @@
-#pragma once
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <string>
-#include <ctime>
-#include <unistd.h>
-#include <string.h>
-#include <iomanip> 
-using namespace std;
+#ifndef MEMINFO_HPP
+#define MEMINFO_HPP
 
-void displayMemInfo();
+#include <windows.h>
+
+// Writes total MB to totalMB, free MB to freeMB
+void getMemoryUsage(DWORDLONG& totalMB, DWORDLONG& freeMB);
+
+#endif // MEMINFO_HPP

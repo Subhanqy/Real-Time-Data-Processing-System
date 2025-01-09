@@ -1,17 +1,7 @@
-#pragma once
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstdlib>
-#include <string>
-#include <ctime>
-#include <cstdio>
-#include <unistd.h>
-#include <string.h>
-#include <iomanip> 
-using namespace std;
+#ifndef STAT_HPP
+#define STAT_HPP
 
-void clearScreen();
-int num_core();
-void displayStat();
+// Returns approximate total CPU usage (0..100%) across all cores
+double getCPUUsage();
 
+#endif // STAT_HPP
